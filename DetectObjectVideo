@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+from object_detection import ObjectDetection
+from deep_sort.deep_sort import Deep
+
+#Load Object DEtection
+od = ObjectDEtection()
+
+#import video
+cap = cv2.VideoCapture('C:/Users/bajaree/PycharmProjects/ImageDetect/7-3-23 PythonTest.mp4')
+ret, img = cap.read()
+rows, cols, _ = img.shape
+
+while True:
+    ret, img = cap.read()
+
+    #img = img(356: rows, 552: cols)
+
+    #Show image
+    cv2.imshow("img", img)
+    key = cv2.waitKey(1)
+    if key == 1:
+        break
+
+cv2.destroyAllWindows()
+
